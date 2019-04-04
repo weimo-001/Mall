@@ -1,13 +1,18 @@
 <template lang="pug">
-    router-view
+    div
+      GlobalNav
+      router-view
+      GlobalFooter
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import GlobalNav from "./components/GlobalNav.vue";
+import GlobalFooter from "./components/GlobalFooter.vue";
+
 
 export default {
   name: "app",
-  components: {}
+  components: { GlobalNav, GlobalFooter }
 };
 </script>
 
