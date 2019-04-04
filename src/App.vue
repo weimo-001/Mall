@@ -1,18 +1,18 @@
 <template lang="pug">
     div
-      GlobalNav
-      router-view
-      GlobalFooter
+      nav
+        router-view(name="GlobalNav")
+        router-view(name="RegularNav")
+      router-view(name="default")
+      router-view(name="footer")
 </template>
 
 <script>
-import GlobalNav from "./components/GlobalNav.vue";
-import GlobalFooter from "./components/GlobalFooter.vue";
+
 
 
 export default {
   name: "app",
-  components: { GlobalNav, GlobalFooter }
 };
 </script>
 

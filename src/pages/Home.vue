@@ -14,10 +14,10 @@ mixin productCardList(title,cardNumber,length)
             each card in new Array(cardNumber).fill(0)
                 +productCard(length?length:6)
 div.carousel
-   div.container
+  div.container
     el-carousel(:interval='4000', type='card', height='200px')
       el-carousel-item(v-for='item in 6', :key='item')
-   div.container
+  div.container
     +productCardList('新品',8)
     +productCardList('促销',6,4)
     

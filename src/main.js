@@ -14,7 +14,9 @@ import './style/changeElementUI.scss';
 import Home from './pages/Home.vue';
 import ProductView from "./pages/ProductView.vue";
 import Search from './pages/Search.vue';
-
+import GlobalNav from "./components/GlobalNav.vue";
+import RegularNav from "./components/RegularNav.vue";
+import GlobalFooter from "./components/GlobalFooter.vue";
 
 Vue.use(VueRouter);
 Vue.use(ElementUI);
@@ -23,13 +25,27 @@ const router = new VueRouter({
   routes: [
     {
       path: '/',
-      component: Home
+      components: {
+        GlobalNav,
+        RegularNav,
+        default: Home,
+        footer: GlobalFooter
+      }
     }, {
       path: '/product/:id',
-      component: ProductView
-    },{
-      path:'/search',
-      component:Search
+      components: {
+        GlobalNav,
+        default: ProductView,
+        footer: GlobalFooter
+      }
+    }, {
+      path: '/search',
+      components: {
+        GlobalNav,
+        RegularNav,
+        default: Search,
+        footer: GlobalFooter
+      }
     }
   ]
 })

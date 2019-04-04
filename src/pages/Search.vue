@@ -7,10 +7,6 @@ mixin cat(n,name)
             div.option= n++
 div
   div.container
-    form.search
-      el-input(placeholder="请输入内容" suffix-icon="el-icon-search")
-      button(type="submit" hidden)
-  div.container
     div.filter
       div.table
         +cat(1,"品牌")
