@@ -25,3 +25,13 @@
 .el-button {
     border-radius: 0;
 }
+//append slot
+.el-input-group__append{
+    border-radius: 0;
+}
+
+//修改注册/登陆页input的padding
+.el-form-item .el-form-item__content .el-input .el-input__inner{
+    padding:0 .8em;
+    line-height: 2.7;
+}

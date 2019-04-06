@@ -7,8 +7,8 @@ div.global-nav
           router-link.anchor(to="/search") Search
       el-col.text-right(:span="12")
           router-link.anchor(to="/product/1") ProductView
-          router-link.anchor(to="/") item
-          a.anchor(href="#") item
+          router-link.anchor(to="/login") 登陆
+          router-link.anchor(to="/signup") 注册
           a.anchor(href="#") item
           a.anchor(href="#") item
 

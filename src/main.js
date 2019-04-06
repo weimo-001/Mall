@@ -14,6 +14,8 @@ import './style/changeElementUI.scss';
 import Home from './pages/Home.vue';
 import ProductView from "./pages/ProductView.vue";
 import Search from './pages/Search.vue';
+import Signup from './pages/Signup.vue';
+import Login from './pages/Login.vue';
 import GlobalNav from "./components/GlobalNav.vue";
 import RegularNav from "./components/RegularNav.vue";
 import GlobalFooter from "./components/GlobalFooter.vue";
@@ -46,6 +48,20 @@ const router = new VueRouter({
         default: Search,
         footer: GlobalFooter
       }
+    }, {
+      path: '/login',
+      components: {
+        GlobalNav,
+        default: Login,
+        footer: GlobalFooter
+      },
+    }, {
+      path: '/signup',
+      components: {
+        GlobalNav,
+        default: Signup,
+        footer: GlobalFooter
+      },
     }
   ]
 })
